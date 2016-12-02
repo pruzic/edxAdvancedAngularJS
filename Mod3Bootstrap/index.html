@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+    <title>Services and Factories</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body ng-controller="labController as vm">
+    <div class="container">
+        <h1>Bootstrap With AngularJS</h1>
+        <div class="form-group">
+            <button type="button" uib-tooltip="Click this button to do something amazing." class="btn btn-primary">Hover to show Tooltip</button>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-default" uib-popover='Popover content goes here' popover-title='Popover Title'>Click to show Popover</button>
+        </div>
+        <div class="form-group">
+            <button type="button" class="btn btn-warning" ng-click="vm.addWarning()">Add Warning</button>
+            <button type="button" class="btn btn-danger" ng-click="vm.addDanger()">Add Danger</button>
+
+        </div>
+        <div uib-alert ng-repeat="alert in vm.alerts" type="{{alert.type}}" ng-class="'alert-' + (alert.type || 'warning')" close="vm.dismissAlert($index)">{{alert.text}}</div>
+
+    </div>
+
+
+
+    <script src="./lib/jquery-3.1.0.min.js"></script>
+    <script src="./lib/angular.min.js"></script>
+    <script src="./lib/angular-animate.js"></script>
+    <script src="./lib/ui-bootstrap.min.js"></script>
+    <script src="./lib/ui-bootstrap-tpls.min.js"></script>
+
+    <script src="./src/app.js"></script>
+    <script src="./src/labController.js"></script>
+
+</body>
+
+</html>

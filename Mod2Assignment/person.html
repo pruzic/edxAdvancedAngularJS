@@ -1,0 +1,19 @@
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Nationality</th>
+            <th>Dates</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="p in list.person">
+            <td>{{p.name}}</td>
+            <td>{{p.nationality}}</td>
+            <td>{{p.dates}}</td>
+            <td>
+                <button class="btn btn-primary" ng-click="list.show($index);">Details</button>
+            </td>
+        </tr>
+    </tbody>
+</table>

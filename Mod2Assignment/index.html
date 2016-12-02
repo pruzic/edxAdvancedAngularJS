@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+    <title>Services and Factories</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+
+<body ng-controller="myController as vm">
+    <div class="container">
+        <h1>DIRECTIVE</h1>
+        <person list='vm' action='show()'></person>
+    </div>
+
+    <script src="./lib/angular.min.js"></script>
+    <script src="./src/app.js"></script>
+    <script src="./src/personDirective.js"></script>
+
+    <!--<script src="./src/sessionController.js"></script>
+    <script src="./src/sessionService.js"></script>-->
+</body>
+
+</html>

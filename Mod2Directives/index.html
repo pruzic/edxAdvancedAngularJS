@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html ng-app="app">
+
+<head>
+    <title>Services and Factories</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+
+<body ng-controller="myController as vm">
+    <div class="container">
+        <h1>DIRECTIVE</h1>
+        <div my-directive type='name'></div>
+        <div my-directive type='address'></div>
+        <static-message-directive></static-message-directive>
+        <h3-message-directive title='Keep Calm and Code on'></h3-message-directive>
+        <!--<person person='vm.person' ></person>-->
+        <person person='vm.person' action='vm.show()'></person>
+
+    </div>
+
+    <script src="./lib/angular.min.js"></script>
+    <script src="./src/app.js"></script>
+    <script src="./src/staticMessageDirective.js"></script>
+    <script src="./src/h3MessageDirective.js"></script>
+    <script src="./src/personDirective.js"></script>
+
+    <!--<script src="./src/sessionController.js"></script>
+    <script src="./src/sessionService.js"></script>-->
+</body>
+
+</html>
