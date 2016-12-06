@@ -49,7 +49,7 @@
 
         datePckr.toggleMin = function() {
             // datePckr.inlineOptions.minDate = datePckr.inlineOptions.minDate ? null : new Date();
-            var currDate = Today(); // new Date();
+            var currDate = new Date();
 
             var dat = currDate;
             console.log('Min Date Set: ' + dat);
